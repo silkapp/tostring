@@ -1,7 +1,7 @@
 name:                tostring
 version:             0.2
 synopsis:            The ToString class
-license:             AllRightsReserved
+license:             OtherLicense
 license-file:        LICENSE
 author:              Silk B.V.
 maintainer:          code@silkapp.com
