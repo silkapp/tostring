@@ -12,6 +12,6 @@ library
   exposed-modules:     Data.String.ToString
   build-depends:       base        == 4.*
                      , utf8-string == 0.3.*
-                     , text        == 0.11.*
+                     , text        >= 0.11 && < 1.2
   hs-source-dirs:      src
 
