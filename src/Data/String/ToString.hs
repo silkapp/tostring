@@ -1,14 +1,15 @@
-{-# LANGUAGE TypeSynonymInstances
-           , FlexibleInstances
-           #-}
+{-# LANGUAGE
+    FlexibleInstances
+  , TypeSynonymInstances
+  #-}
 module Data.String.ToString
   ( ToString (..)
   ) where
 
-import qualified Data.ByteString.UTF8 as SBU
 import qualified Data.ByteString.Lazy.UTF8 as LBU
-import qualified Data.Text as ST
-import qualified Data.Text.Lazy as LT
+import qualified Data.ByteString.UTF8      as SBU
+import qualified Data.Text                 as ST
+import qualified Data.Text.Lazy            as LT
 
 class ToString a where
   toString :: a -> String
