@@ -1,5 +1,5 @@
 name:                tostring
-version:             0.2.0.1
+version:             0.2.0.2
 synopsis:            The ToString class
 description:         A type class for converting text types to String.
 license:             BSD3
@@ -11,6 +11,7 @@ cabal-version:       >=1.8
 license-file:        LICENSE
 
 extra-source-files:
+  CHANGELOG.md
   LICENSE
   README.md
 
