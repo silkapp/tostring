@@ -2,10 +2,9 @@
     FlexibleInstances
   , TypeSynonymInstances
   #-}
-module Data.String.ToString
-  ( ToString (..)
-  ) where
+module Data.String.ToString (ToString (..)) where
 
+import Data.CaseInsensitive (CI, foldedCase)
 import qualified Data.ByteString.Lazy.UTF8 as LBU
 import qualified Data.ByteString.UTF8      as SBU
 import qualified Data.Text                 as ST
@@ -28,3 +27,6 @@ instance ToString ST.Text where
 
 instance ToString LT.Text where
   toString = LT.unpack
+
+instance ToString s => ToString (CI s) where
+  toString = toString . foldedCase
