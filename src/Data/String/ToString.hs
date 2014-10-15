@@ -1,6 +1,7 @@
 {-# LANGUAGE
     FlexibleInstances
   , TypeSynonymInstances
+  , DefaultSignatures
   #-}
 module Data.String.ToString (ToString (..)) where
 
@@ -12,6 +13,8 @@ import qualified Data.Text.Lazy            as LT
 
 class ToString a where
   toString :: a -> String
+  default toString :: Show a => a -> String
+  toString = show
 
 instance ToString String where
   toString = id
